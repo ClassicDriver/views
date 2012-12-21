@@ -115,6 +115,10 @@ Drupal.views.ajaxView.prototype.attachPagerLinkAjax = function(id, link) {
 };
 
 Drupal.ajax.prototype.commands.viewsScrollTop = function (ajax, response, status) {
+
+  // Hotfix by Michi
+  return;
+
   // Scroll to the top of the view. This will allow users
   // to browse newly loaded content after e.g. clicking a pager
   // link.
