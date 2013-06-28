@@ -39,7 +39,7 @@ class views_handler_sort extends views_handler {
     $options['exposed'] = array('default' => FALSE, 'bool' => TRUE);
     $options['expose'] = array(
       'contains' => array(
-        'label' => array('default' => '', 'translatable' => TRUE),
+        'label' => array('default' => '', 'translatable' => FALSE),
       ),
     );
     return $options;
