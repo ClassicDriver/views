@@ -40,10 +40,10 @@ class views_plugin_pager_full extends views_plugin_pager {
     );
     $options['tags'] = array(
       'contains' => array(
-        'first' => array('default' => '« first', 'translatable' => TRUE),
-        'previous' => array('default' => '‹ previous', 'translatable' => TRUE),
-        'next' => array('default' => 'next ›', 'translatable' => TRUE),
-        'last' => array('default' => 'last »', 'translatable' => TRUE),
+        'first' => array('default' => '« first', 'translatable' => FALSE),
+        'previous' => array('default' => '‹ previous', 'translatable' => FALSE),
+        'next' => array('default' => 'next ›', 'translatable' => FALSE),
+        'last' => array('default' => 'last »', 'translatable' => FALSE),
       ),
     );
     return $options;
@@ -269,10 +269,10 @@ class views_plugin_pager_full extends views_plugin_pager {
     $pager_theme = views_theme_functions('pager', $this->view, $this->display);
     // The 0, 1, 3, 4 index are correct. See theme_pager documentation.
     $tags = array(
-      0 => $this->options['tags']['first'],
-      1 => $this->options['tags']['previous'],
-      3 => $this->options['tags']['next'],
-      4 => $this->options['tags']['last'],
+      0 => t($this->options['tags']['first']),
+      1 => t($this->options['tags']['previous']),
+      3 => t($this->options['tags']['next']),
+      4 => t($this->options['tags']['last']),
     );
     $output = theme($pager_theme, array(
       'tags' => $tags,
