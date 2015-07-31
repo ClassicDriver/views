@@ -311,3 +311,5 @@ files[] = tests/user/views_user.test
 files[] = tests/views_cache.test
 files[] = tests/views_view.test
 files[] = tests/views_ui.test
+
+version = "7.x-3.11"
